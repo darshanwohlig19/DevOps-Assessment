@@ -29,6 +29,6 @@ jobs:
       - name: Creating container
         run: |
         
-          docker run -it --name $CONTAINER-NAME 
+          docker run -it --name ${{secrets.CONTAINER_NAME}} $IMAGE_TAG
           docker tag ${{secrets.CONTAINER_NAME}} ${{ secrets.DOCKER_USERNAME }}/devops-assessment        
 
