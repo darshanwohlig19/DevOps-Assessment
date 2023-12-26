@@ -22,13 +22,6 @@ jobs:
           IMAGE_TAG="darshan-48" # Custom tag name
           docker build -t $IMAGE_TAG .
           docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
-     
-      - name: Creating container
-        run: |
-        
-          docker run -it --name ${{secrets.CONTAINER_NAME}} $IMAGE_TAG
-          docker tag ${{secrets.CONTAINER_NAME}} ${{ secrets.DOCKER_USERNAME }}/devops-assessment        
-
 
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:darshan-48
