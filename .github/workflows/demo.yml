@@ -18,10 +18,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build the Docker image
-          IMAGE_TAG= "hello-darshan"
-        run: docker build -t $IMAGE_TAG .
+        run: |
+          IMAGE_TAG="hello-darshan" # Custom tag name
+          docker build -t $IMAGE_TAG .
           docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
-
 
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment
