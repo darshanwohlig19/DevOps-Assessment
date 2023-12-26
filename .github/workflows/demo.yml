@@ -26,6 +26,4 @@ jobs:
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:darshan-48
 
-      - name: CREATE DOCKER CONTAINER
-        run: docker container run -d ubuntu
      
