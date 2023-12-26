@@ -24,4 +24,4 @@ jobs:
           docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
 
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:hello-darshan
