@@ -27,5 +27,5 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:darshan-48
 
       - name: CREATE DOCKER CONTAINER
-        run: docker container run -d $IMAGE_TAG
+        run: docker container run -d ubuntu
      
