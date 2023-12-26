@@ -28,7 +28,7 @@ jobs:
 
       - name: Creating container
         run: |
-          CONTAINER-NAME="ARHAM_CHUTIYA"
+        
           docker run -it --name $CONTAINER-NAME 
-          docker tag $CONTAINER-NAME ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$CONTAINER-NAME ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
+          docker tag ${{secrets.CONTAINER_NAME}} ${{ secrets.DOCKER_USERNAME }}/devops-assessment        
 
