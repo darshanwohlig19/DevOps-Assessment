@@ -28,7 +28,7 @@ jobs:
           sed -i 's|old_image_reference|'${{ secrets.DOCKER_USERNAME }}/devops-assessment:darshan-48'|g' deployment.yml
        
       - name: Docker Push
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:darshan-48
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
 
  
      
