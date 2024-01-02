@@ -29,7 +29,7 @@ jobs:
 
       - name: Update manifest file
         run: |
-         yq -i 's|darshan-48|'"${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG"'|g' deployment.yml
+        yq e '.spec.template.spec.containers[0].image = "darshanwohlig/devops-assessment:${{ env.GITHUB_BRANCH }}"' -i deployment.yaml
        
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
