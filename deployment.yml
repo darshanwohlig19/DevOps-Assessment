@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nodeserver
-          image: darshanwohlig/bad-2023
+          image: darshanwohlig/devops-assessment
           ports:
             - containerPort: 8080
  
