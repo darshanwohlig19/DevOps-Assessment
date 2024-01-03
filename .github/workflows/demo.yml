@@ -30,8 +30,7 @@ jobs:
 
       - name: Update manifest file
         run: |
-         sed -i "s|devops-assessment:new_tag|${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG|g" ./deployment.yml
-
+          yq e '.spec.template.spec.containers[0].image = "darshanwohlig/darshan-48:${{ env.main }}"' -i deployment.yml
 
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
