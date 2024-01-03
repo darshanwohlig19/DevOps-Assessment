@@ -30,7 +30,7 @@ jobs:
 
       - name: Update manifest file
         run: |
-          sed -i 's|devops-assessment:new_tag|new_image_name:$IMAGE_TAG|g' ../deployment.yml
+          sed -i 's|devops-assessment:new_tag|op:$IMAGE_TAG|g' ../deployment.yml
 
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
