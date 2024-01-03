@@ -37,6 +37,9 @@ jobs:
       - name: Update manifest file
         run: |
           yq e '.spec.template.spec.containers[0].image = "arham1005/devops-assessment:${{ env.GITHUB_BRANCH }}"' -i deployment.yml
+
+          git config --global user.email "arham.sangoi@wohlig.com"
+          git config --global user.name "arham-git-bot"
           git add .
           git commit -m "new"
           git push
