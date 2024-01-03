@@ -28,9 +28,9 @@ jobs:
           docker build -t $IMAGE_TAG .
           docker tag $IMAGE_TAG ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
 
-      # - name: Update manifest file
-      #   run: |
-      #     yq e '.spec.template.spec.containers[0].image = "arham1005/sample:${{ env.GITHUB_BRANCH }}"' -i deployment.yaml
+      - name: Update manifest file
+        run: |
+          yq e '.spec.template.spec.containers[0].image = "arham1005/devops-assessment:${{ env.GITHUB_BRANCH }}"' -i deployment.yaml
        
       - name: Docker Push
         run: docker push ${{ secrets.DOCKER_USERNAME }}/devops-assessment:$IMAGE_TAG
