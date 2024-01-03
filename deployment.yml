@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nodeserver
-          image: darshanwohlig/devops-assessment
+          image: arham1005/devops-assessment
           ports:
             - containerPort: 8080
  
