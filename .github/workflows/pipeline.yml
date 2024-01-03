@@ -37,5 +37,6 @@ jobs:
       - name: Update manifest file
         run: |
           yq e '.spec.template.spec.containers[0].image = "arham1005/devops-assessment:${{ env.GITHUB_BRANCH }}"' -i deployment.yml
+          git status
        
       
