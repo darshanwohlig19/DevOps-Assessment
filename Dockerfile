@@ -1,5 +1,7 @@
 FROM node:latest
-COPY . .
+WORKDIR  /
+COPY package*.json ./
 RUN npm install
+COPY . .
 EXPOSE 8080
-CMD ["server.js"]
+CMD ["node", "server.js"]
