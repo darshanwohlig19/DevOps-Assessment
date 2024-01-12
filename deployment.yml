@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: nodeserver
-          image: darshanwohlig/devops-assessment:main-a660485c6d9c486a302cc3275b44c72c26b64a78
+          image: darshanwohlig/devops-assessment:main-8802abd6b2fc0e22176748dbacaf251b23766cb6
           ports:
             - containerPort: 8080
