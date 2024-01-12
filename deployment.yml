@@ -13,7 +13,7 @@ spec:
         app: node-app
     spec:
       containers:
-      - name: node-app-container
-        image: your-node-app-image:tag
-        ports:
-        - containerPort: 3000
+        - name: node-app-container
+          image: arham1005/devops-assessment:main-a69ac9a99a12fd69e399734784dd8b5241793098
+          ports:
+            - containerPort: 3000
