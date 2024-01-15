@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: mynode-app
-          image: darshanwohlig/mynode-app
+          image: darshanwohlig/devops-assessment:main-553b4352f0db3548fbe4acee071014b67b4a97de
           ports:
             - containerPort: 8080
