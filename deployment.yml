@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-deployment
+  name: mynode-app
+  namespace: nodejs
   labels:
     app: nodeapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nodeapp
+      app: mynode-app
   template:
     metadata:
       labels:
-        app: nodeapp
+        app: mynode-app
     spec:
       containers:
-        - name: nodeserver
-          image: darshanwohlig/devops-assessment:main-8802abd6b2fc0e22176748dbacaf251b23766cb6
+        - name: mynode-app
+          image: darshanwohlig/mynode-app
           ports:
             - containerPort: 8080
